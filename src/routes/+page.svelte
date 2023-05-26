@@ -1,5 +1,5 @@
 <script>
-	let name = '';
+	let name = 'juancho-20';
 	let current = '5';
 </script>
 
