@@ -9,7 +9,7 @@
   
     onMount(async () => {
       const res = await fetch(
-        `http://ws.audioscrobbler.com/2.0/?method=album.getinfo&api_key=${import.meta.env.VITE_API_KEY}&artist=${name}&album=${album}&format=json`
+        `https://ws.audioscrobbler.com/2.0/?method=album.getinfo&api_key=${import.meta.env.VITE_API_KEY}&artist=${name}&album=${album}&format=json`
       );
       const data = await res.json();
       urlImage = data.album.image[1]["#text"];
