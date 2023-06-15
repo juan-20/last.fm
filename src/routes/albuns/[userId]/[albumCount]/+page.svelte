@@ -96,9 +96,10 @@
   <title>Semaninha</title>
   <meta
     name="description"
-    content="Discover the most popular albums from your favorite artists on Last.fm. Our site displays the most listened albums for any user, updated in real-time. Explore new music and rediscover old favorites with our comprehensive album rankings."
+    content="Descubra os álbuns mais ouvidos por você de seus artistas favoritos no lastinha.fm. 
+    Nosso site exibe os álbuns mais ouvidos por qualquer usuário, atualizados em tempo real para mostrar para seus amigos."
   />
-  <meta property="og:image" content={imageCover} />
+  <meta property="og:image" content="https://pbs.twimg.com/media/FuhlebOX0AEMBaG.png" />
 </svelte:head>
 
 <div class="relative" id="home">

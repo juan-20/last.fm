@@ -13,7 +13,11 @@
 <div class="flex items-center justify-center gap-4">
 
 </div> -->
-
+<svelte:head>
+  <title>Lastinha</title>
+  <meta name="description" content="Gerador de colagem dos albuns mais escutados na semaninha do LAST FM. vêm scroblar.">
+  <meta property="og:image" content="https://pbs.twimg.com/media/FuhlebOX0AEMBaG.png" />
+</svelte:head>
 
 
 <div class="relative" id="home">
