@@ -14,9 +14,29 @@
 
 </div> -->
 <svelte:head>
+  <title>Semaninha</title>
+  <meta charset="utf-8">
+  <meta name="language" content="pt-BR">
   <title>Lastinha</title>
-  <meta name="description" content="Gerador de colagem dos albuns mais escutados na semaninha do LAST FM. vêm scroblar.">
-  <meta property="og:image" content="https://pbs.twimg.com/media/FuhlebOX0AEMBaG.png" />
+  <meta name="description" content="Gerador de colagem dos albuns mais escutados na semaninha do last.fm">
+  <meta name="robots" content="all">
+  <meta name="author" content="Semaninha">
+  <meta name="keywords" content="lastinha,last.fm,semaninha ">
+
+  <meta property="og:type" content="page">
+  <meta property="og:url" content="https://last-fm-rho.vercel.app/">
+  <meta property="og:title" content="Lastinha">
+  <meta property="og:image" content="https://pbs.twimg.com/media/FuhlebOX0AEMBaG.png">
+  <meta property="og:description" content="Gerador de colagem dos albuns mais escutados na semaninha do last.fm">
+
+  <meta property="article:author" content="Juan">
+
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:site" content="@Semaninha">
+  <meta name="twitter:title" content="Lastinha">
+  <meta name="twitter:creator" content="@Semaninha">
+  <meta name="twitter:description" content="Gerador de colagem dos albuns mais escutados na semaninha do last.fm">
+  <link rel="canonical" />
 </svelte:head>
 
 
@@ -24,13 +44,13 @@
         <div class="relative pt-36 ml-auto">
             <div class="lg:w-2/3 text-center mx-auto">
                 <h1 class="text-gray-900 dark:text-white font-bold text-5xl md:text-6xl xl:text-7xl">Semaninha <span class="text-primary dark:text-white">Last.fm</span></h1>
-                <p class="mt-8 text-gray-700 dark:text-gray-300">Explore seus álbuns mais ouvidos da semana no Last.fm. Descubra sua trilha sonora pessoal em apenas alguns cliques. Música sob medida para você</p>
+                <p class="mt-8 text-gray-700 dark:text-gray-300">Explore seus álbuns mais ouvidos na semaninha no Last.fm. Descubra sua trilha sonora pessoal em apenas alguns cliques. Música sob medida para você</p>
                 <div class="mt-16 flex flex-wrap justify-center gap-y-4 gap-x-6">
                     <input class="shadow appearance-none border border-indigo-700 rounded w-72 h-8 py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" 
 					bind:value={name} 
 					placeholder="Seu @ do last.fm" id="lastfmUser" required autofocus>
 
-				<a class="flex justify-center items-center bg-yellow-500 hover:bg-yellow-600 text-black w-32 h-8 rounded-lg" href="albuns/{name}/{current}">Gerar</a>
+				<a class="flex justify-center items-center bg-yellow-500 hover:bg-yellow-600 text-black w-32 h-8 rounded-lg" href="albuns/{name}/{current}">Gerar semaninha</a>
                 </div>
                 <div class="py-8 mt-16 border-y border-gray-100 dark:border-gray-800 flex flex-col gap-4 justify-between items-center">
 					<h2>Selecione o grid que deseja:</h2>
