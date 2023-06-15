@@ -94,12 +94,27 @@
 
 <svelte:head>
   <title>Semaninha</title>
-  <meta
-    name="description"
-    content="Descubra os álbuns mais ouvidos por você de seus artistas favoritos no lastinha.fm. 
-    Nosso site exibe os álbuns mais ouvidos por qualquer usuário, atualizados em tempo real para mostrar para seus amigos."
-  />
-  <meta property="og:image" content="https://pbs.twimg.com/media/FuhlebOX0AEMBaG.png" />
+  <meta charset="utf-8">
+  <meta name="language" content="pt-BR">
+  <title>Lastinha</title>
+  <meta name="description" content="Explore sua Semaninha pessoal no Lastinha e descubra uma deliciosa colagem dos artistas que você tem ouvido. ">
+  <meta name="robots" content="all">
+  <meta name="author" content="Semaninha">
+  <meta name="keywords" content="lastinha,last.fm,semaninha ">
+
+  <meta property="og:type" content="page">
+  <meta property="og:url" content="https://last-fm-rho.vercel.app/">
+  <meta property="og:title" content="Lastinha">
+  <meta property="og:image" content="https://pbs.twimg.com/media/FuhlebOX0AEMBaG.png">
+  <meta property="og:description" content="Explore sua Semaninha pessoal no Lastinha e descubra uma deliciosa colagem dos artistas que você tem ouvido. ">
+
+  <meta property="article:author" content="Juan">
+
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:site" content="@Semaninha">
+  <meta name="twitter:title" content="Lastinha">
+  <meta name="twitter:creator" content="@Semaninha">
+  <meta name="twitter:description" content="Explore sua Semaninha pessoal no Lastinha e descubra uma deliciosa colagem dos artistas que você tem ouvido. ">
 </svelte:head>
 
 <div class="relative" id="home">
