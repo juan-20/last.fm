@@ -17,7 +17,7 @@
   <title>Semaninha</title>
   <meta charset="utf-8">
   <meta name="language" content="pt-BR">
-  <title>Lastinha</title>
+  <title>Lastinha - Semaninha para localStorage.fm</title>
   <meta name="description" content="Gerador de colagem dos albuns mais escutados na semaninha do last.fm">
   <meta name="robots" content="all">
   <meta name="author" content="Semaninha">
@@ -36,7 +36,7 @@
   <meta name="twitter:title" content="Lastinha">
   <meta name="twitter:creator" content="@Semaninha">
   <meta name="twitter:description" content="Gerador de colagem dos albuns mais escutados na semaninha do last.fm">
-  <link rel="canonical" />
+  <link rel="canonical" href="https://last-fm-rho.vercel.app/" />
 </svelte:head>
 
 
