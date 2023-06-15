@@ -12,7 +12,7 @@
         `https://ws.audioscrobbler.com/2.0/?method=album.getinfo&api_key=${import.meta.env.VITE_API_KEY}&artist=${name}&album=${album}&format=json`
       );
       const data = await res.json();
-      urlImage = data.album.image[1]["#text"];
+      urlImage = data.album.image[2]["#text"];
   
       // Notify the parent component about the urlImage
       if (onImageUrlSet) {

@@ -82,28 +82,64 @@
   <meta property="og:image" content={imageCover} />
 </svelte:head>
 
+<div class="relative" id="home">
+  <div class="relative pt-36 ml-auto">
+      <div class="lg:w-2/3 text-center mx-auto">
+<nav>
+  <a class="flex items-center gap-1 dark:text-yellow-300 cursor-pointer z-50" href="/">
+    <svg class="dark:fill-yellow-300 fill-black" xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 256 256"><path d="M232,184a8,8,0,0,1-16,0A88,88,0,0,0,67.47,120.16l26.19,26.18A8,8,0,0,1,88,160H24a8,8,0,0,1-8-8V88a8,8,0,0,1,13.66-5.66l26.48,26.48A104,104,0,0,1,232,184Z"></path></svg>
+    Voltar
+  </a>
+</nav>
 <h1 class="p-10">Mais ouvidos</h1>
 
 <!-- svelte-ignore missing-declaration -->
-<div bind:this={divRef} class="grid grid-cols-2 gap-3 md:grid-cols-8 2xl:grid-cols-10">
+{#if data.Album.weeklyalbumchart.album.length >= 10}
+<div class="flex items-center content-center flex-col">
+<div bind:this={divRef} class="grid grid-cols-5 w-fit">
   {#if data.Album.weeklyalbumchart.album.length > 0}
     {#each data.Album.weeklyalbumchart.album as item}
-      <div class="">
+    <div class="flex flex-col items-center w-fit">
         <!-- <img src={item.image[2]["#text"]} alt="" /> -->
         <Image
           name={item.artist['#text']}
           album={item.name}
           onImageUrlSet={handleImageUrlSet}
         />
-        <p class="max-h-8 truncate">{item.name}</p>
-        <p class="max-h-8 truncate">{item.artist['#text']}</p>
+        <!-- <p class="max-h-8 truncate">{item.name}</p>
+        <p class="max-h-8 truncate">{item.artist['#text']}</p> -->
       </div>
-    {/each}
-  {:else}
-    <p>Loading...</p>
-  {/if}
-</div>
-<div class="pt-3 flex gap-4">
+      {/each}
+      {:else}
+      <p>Loading...</p>
+      {/if}
+    </div>
+    
+    </div>
+    {:else}
+    <div class="flex items-center content-center flex-col">
+    <div bind:this={divRef} class="grid grid-cols-3 md:grid-cols-3 2xl:grid-cols-3 w-fit">
+      {#if data.Album.weeklyalbumchart.album.length > 0}
+        {#each data.Album.weeklyalbumchart.album as item}
+          <div class="flex flex-col items-center w-fit">
+            <!-- <img src={item.image[2]["#text"]} alt="" /> -->
+            <Image
+              name={item.artist['#text']}
+              album={item.name}
+              onImageUrlSet={handleImageUrlSet}
+            />
+            <!-- <p class="max-h-8 truncate">{item.name}</p>
+            <p class="max-h-8 truncate">{item.artist['#text']}</p> -->
+          </div>
+          {/each}
+          {:else}
+          <p>Loading...</p>
+          {/if}
+        </div>
+    </div>
+
+    {/if}
+<div class="pt-10 gap-4 grid grid-cols-2 md:grid-cols-3">
   <button
     on:click={downloadImage}
     class="flex gap-4 justify-center items-center bg-indigo-700 text-white w-32 h-8 rounded-sm"
@@ -126,3 +162,23 @@
     <p class="text-sm">Dowload and share</p>
   </button>
 </div>
+
+<footer class="dark:bg-zinc-900 bg-gray-300">
+  <div class="mx-auto w-full max-w-screen-xl">
+
+  <div class="px-4 py-6 dark:bg-zinc-900 bg-gray-300 md:flex md:items-center md:justify-between">
+      <span class="text-sm text-gray-500 dark:text-gray-300 sm:text-center">© 2023 <a href="https://flowbite.com/">LASTinha™</a>. All Rights Reserved.
+      </span>
+      <div class="flex mt-4 space-x-6 sm:justify-center md:mt-0">
+          <a href="https://github.com/juan-20/last.fm" class="text-gray-400 hover:text-gray-900 dark:hover:text-white">
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="#ecf3f3" viewBox="0 0 256 256"><path d="M216,104v8a56.06,56.06,0,0,1-48.44,55.47A39.8,39.8,0,0,1,176,192v40a8,8,0,0,1-8,8H104a8,8,0,0,1-8-8V216H72a40,40,0,0,1-40-40A24,24,0,0,0,8,152a8,8,0,0,1,0-16,40,40,0,0,1,40,40,24,24,0,0,0,24,24H96v-8a39.8,39.8,0,0,1,8.44-24.53A56.06,56.06,0,0,1,56,112v-8a58.14,58.14,0,0,1,7.69-28.32A59.78,59.78,0,0,1,69.07,28,8,8,0,0,1,76,24a59.75,59.75,0,0,1,48,24h24a59.75,59.75,0,0,1,48-24,8,8,0,0,1,6.93,4,59.74,59.74,0,0,1,5.37,47.68A58,58,0,0,1,216,104Z"></path></svg>
+              <span class="sr-only">GitHub</span>
+          </a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+      </div>
+    </div>
+  </div>

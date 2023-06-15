@@ -3,38 +3,60 @@
 	let current = '5';
 </script>
 
-<div class="flex items-center justify-center gap-4">
-<input class="shadow appearance-none border border-indigo-700 rounded w-72 h-8 py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" 
-	bind:value={name} 
-	placeholder="Seu @ do last.fm" id="lastfmUser" required autofocus>
+<!-- <div class="flex items-center justify-center gap-4">
 
-	<a class="flex justify-center items-center bg-indigo-700 text-white w-32 h-8 rounded-lg" href="albuns/{name}/{current}">Click me</a>
 </div>
-<div class="flex">
-<button
-	class:active="{current === '3'}"
-	on:click="{() => current = '3'}"
-  class="bg-amber-500 w-32 hover:border-black hover:bg-amber-800"
->3 X 3 </button>
-
-<button
-	class:active="{current === '5'}"
-	on:click="{() => current = '5'}"
-  class="bg-amber-500 w-32 hover:border-black hover:bg-amber-800"
->5 X 5 </button>
-
-<button
-	class:active="{current === '10'}"
-	on:click="{() => current = '10'}"
-  class="bg-amber-500 w-32 hover:border-black hover:bg-amber-800"
->10 X 10 </button>
-<button
-	class:active="{current === '4'}"
-	on:click="{() => current = '4'}"
-  class="bg-amber-500 w-32 hover:border-black hover:bg-amber-800"
->4 X 4 </button>
-</div>
-
+<h2>Selecione o grid que deseja:</h2>
 <p>
-	{current}
+	{current} X {current}  esta selecionado.
 </p>
+<div class="flex items-center justify-center gap-4">
+
+</div> -->
+
+
+
+<div class="relative" id="home">
+        <div class="relative pt-36 ml-auto">
+            <div class="lg:w-2/3 text-center mx-auto">
+                <h1 class="text-gray-900 dark:text-white font-bold text-5xl md:text-6xl xl:text-7xl">Semaninha <span class="text-primary dark:text-white">Last.fm</span></h1>
+                <p class="mt-8 text-gray-700 dark:text-gray-300">Explore seus álbuns mais ouvidos da semana no Last.fm. Descubra sua trilha sonora pessoal em apenas alguns cliques. Música sob medida para você</p>
+                <div class="mt-16 flex flex-wrap justify-center gap-y-4 gap-x-6">
+                    <input class="shadow appearance-none border border-indigo-700 rounded w-72 h-8 py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" 
+					bind:value={name} 
+					placeholder="Seu @ do last.fm" id="lastfmUser" required autofocus>
+
+				<a class="flex justify-center items-center bg-yellow-500 hover:bg-yellow-600 text-black w-32 h-8 rounded-lg" href="albuns/{name}/{current}">Gerar</a>
+                </div>
+                <div class="py-8 mt-16 border-y border-gray-100 dark:border-gray-800 flex flex-col gap-4 justify-between items-center">
+					<h2>Selecione o grid que deseja:</h2>
+                    <div class="text-left">
+                        <button
+							class:active="{current === '3'}"
+							on:click="{() => current = '3'}"
+						class="bg-yellow-500 text-black w-32 hover:border-black hover:bg-yellow-600"
+						>3 X 3 </button>
+                    </div>
+                    <div class="text-left">
+                        <button
+						class:active="{current === '5'}"
+						on:click="{() => current = '5'}"
+						class="bg-yellow-500 text-black w-32 hover:border-black hover:bg-yellow-600"
+						>5 X 5 </button>
+                    </div>
+                    <div class="text-left">
+                        <button
+							class:active="{current === '10'}"
+							on:click="{() => current = '10'}"
+						class="bg-yellow-500 text-black w-32 hover:border-black hover:bg-yellow-600"
+						>10 X 10 </button>
+                    </div>
+                </div>
+				<p>
+					{current} X {current}  esta selecionado.
+				</p>
+            </div>
+           
+        </div>
+</div>
+
