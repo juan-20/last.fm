@@ -30,15 +30,33 @@
     }
   };
 
-  const shareOnTwitter = () => {
-    if (imageCover) {
-      // Create sharing links
-      const twitterShareUrl = `https://twitter.com/intent/tweet?text=Check%20out%20my%20image`;
+  let choosedWord: string = "";
 
-      // Open sharing links in new windows
-      window.open(twitterShareUrl, "_blank");
-    }
-  };
+  function PhaseTwitter() {
+    const frases: string[] = [
+      "eita",
+      "semaninhaa",
+      "o dessa semana",
+      "amaram?",
+      "meu deus...",
+      "literalmente eu",
+    ];
+    choosedWord = frases[Math.floor(Math.random() * frases.length)];
+    console.log(choosedWord);
+  }
+  const shareOnTwitter = () => {
+  if (imageCover) {
+    PhaseTwitter();
+
+    // Share
+    const twitterShareUrl: string = `https://twitter.com/intent/tweet?text=${encodeURIComponent(choosedWord)}`;
+
+    // Open sharing link in a new window
+    window.open(twitterShareUrl, "_blank");
+  }
+};
+
+
 
   const shareOnTwitterAndDowload = () => {
     if (imageCover) {
@@ -47,8 +65,9 @@
       const date = new Date();
       link.download = `semaninha${date.getDay()}${date.getDate()}${date.getMonth()}.png`;
       link.click();
-      // Create sharing links
-      const twitterShareUrl = `https://twitter.com/intent/tweet?text=Check%20out%20my%20image`;
+      // Share
+      PhaseTwitter();
+      const twitterShareUrl = `https://twitter.com/intent/tweet?text=${encodeURIComponent(choosedWord)}`;
 
       // Open sharing links in new windows
       window.open(twitterShareUrl, "_blank");
