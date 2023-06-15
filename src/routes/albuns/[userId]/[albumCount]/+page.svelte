@@ -97,7 +97,7 @@
   <meta charset="utf-8">
   <meta name="language" content="pt-BR">
   <title>Lastinha</title>
-  <meta name="description" content="Explore sua Semaninha pessoal no Lastinha e descubra uma deliciosa colagem dos artistas que você tem ouvido. ">
+  <meta name="description" content="Gerador de colagem dos albuns mais escutados na semaninha do last.fm">
   <meta name="robots" content="all">
   <meta name="author" content="Semaninha">
   <meta name="keywords" content="lastinha,last.fm,semaninha ">
@@ -106,7 +106,7 @@
   <meta property="og:url" content="https://last-fm-rho.vercel.app/">
   <meta property="og:title" content="Lastinha">
   <meta property="og:image" content="https://pbs.twimg.com/media/FuhlebOX0AEMBaG.png">
-  <meta property="og:description" content="Explore sua Semaninha pessoal no Lastinha e descubra uma deliciosa colagem dos artistas que você tem ouvido. ">
+  <meta property="og:description" content="Gerador de colagem dos albuns mais escutados na semaninha do last.fm">
 
   <meta property="article:author" content="Juan">
 
@@ -114,7 +114,7 @@
   <meta name="twitter:site" content="@Semaninha">
   <meta name="twitter:title" content="Lastinha">
   <meta name="twitter:creator" content="@Semaninha">
-  <meta name="twitter:description" content="Explore sua Semaninha pessoal no Lastinha e descubra uma deliciosa colagem dos artistas que você tem ouvido. ">
+  <meta name="twitter:description" content="Gerador de colagem dos albuns mais escutados na semaninha do last.fm">
 </svelte:head>
 
 <div class="relative" id="home">
